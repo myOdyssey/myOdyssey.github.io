@@ -116,7 +116,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -138,6 +138,158 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/03/hexo%E5%8D%9A%E5%AE%A2%E7%BF%BB%E6%96%B0%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Joe Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joe Zhang's Encyclopedia">
+      <meta itemprop="description" content="我正在装修中的博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Joe Zhang's Encyclopedia">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/03/hexo%E5%8D%9A%E5%AE%A2%E7%BF%BB%E6%96%B0%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">hexo博客翻新记录</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-03 22:43:39 / 修改时间：22:44:17" itemprop="dateCreated datePublished" datetime="2023-04-03T22:43:39+08:00">2023-04-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>去年搭建了我的第一个hexo博客初次使用，很多地方觉得不顺手：</p>
+<ul>
+<li><p>node.js和npm安装在自定义路径，升级维护不便</p>
+</li>
+<li><p>github仓库使用了多个混乱的branch，而且naming convention仍然是如今已经deprecated的master</p>
+</li>
+<li><p>默认主题landscape不够简洁</p>
+</li>
+<li><p>博客名字不够简洁</p>
+</li>
+</ul>
+<p>因为目前为止我的博客不过就是几篇文章的集合罢了，没有什么复杂精细的巧妙构造，也没人看，所以保存好这几篇文章的md文件就可以，其他一切内容都可以全部推倒重来。因此决定重建整个hexo博客。</p>
+<h2 id="下线博客"><a href="#下线博客" class="headerlink" title="下线博客"></a>下线博客</h2><ol>
+<li><p>备份整个博客文件夹</p>
+</li>
+<li><p>删除博客托管在github上的相关内容</p>
+<ul>
+<li><p>首先删除<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">github personal access token</a></p>
+</li>
+<li><p>然后删除整个博客托管所在的github仓库(这样博客就下线了，访问会出现github的定制404页面)</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="重新安装node和hexo"><a href="#重新安装node和hexo" class="headerlink" title="重新安装node和hexo"></a>重新安装node和hexo</h2><ol>
+<li><p>彻底卸载本地自定义目录下的node框架</p>
+<ul>
+<li><p>用<code>sudo find / -name &quot;node&quot;</code>检查node的位置之后直接删掉node所在的整个自定义文件夹，以及误装在系统上的<code>/usr/local/bin/node</code>。</p>
+</li>
+<li><p>再次<code>find</code>清理掉剩下的相关文件。</p>
+</li>
+</ul>
+</li>
+<li><p>到<a target="_blank" rel="noopener" href="https://nodejs.org/en">node.js官网</a>安装node</p>
+<ul>
+<li><p>使用snap安装node<code>sudo snap install node --classic</code>。</p>
+</li>
+<li><p>检查一下<code>node</code>和<code>npm</code>的版本，确实是最新的。</p>
+</li>
+</ul>
+</li>
+<li><p>使用<code>node</code>重新安装hexo框架</p>
+<ul>
+<li><p><code>sudo npm install -g hexo-cli</code>。</p>
+</li>
+<li><p>检查版本<code>hexo --version</code>。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="使用hexo重建一个全新博客"><a href="#使用hexo重建一个全新博客" class="headerlink" title="使用hexo重建一个全新博客"></a>使用hexo重建一个全新博客</h2><ol>
+<li><p>建立博客文件夹并且<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/setup">建站</a>。</p>
+</li>
+<li><p>安装<a target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">polarbear主题</a>的<strong>大失败</strong></p>
+<ul>
+<li><p>安装遇到奇怪error，<a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions#debinstall">使用binary distributions重装node</a>，然后重新安装hexo，重新建站。</p>
+</li>
+<li><p>hexo-renderer-scss安装失败(陈旧的东西总是出问题，再次曲线救国，换其他主题，天涯何处无芳草)。</p>
+</li>
+</ul>
+</li>
+<li><p>决定使用next主题</p>
+<p> next主题是一个维护非常活跃的主题，这意味着很多问题都能得搜得到解决方案，所以是减少折腾、方便学习的好选择，虽然在我看来美观性有待提高。</p>
+</li>
+<li><p>使用next主题配置部署初始博客到github</p>
+<ul>
+<li><p>先<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/#Checking-NexT">get started</a>，按照说明配置next主题。</p>
+</li>
+<li><p>然后参考<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/github-pages">在 GitHub Pages 上部署 Hexo</a>，按照说明建好github的repo给博客使用。</p>
+</li>
+<li><p>使用<a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">一键部署</a>，通过修改<code>_config.yml</code>设置好hexo的<code>deploy</code>相关内容，填写<code>author</code>、网站<code>title</code>和<code>subtitle</code>、网站<code>description</code>等等，并部署到github(需要设置personal access token)。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="恢复原先的博客内容并重新上线博客"><a href="#恢复原先的博客内容并重新上线博客" class="headerlink" title="恢复原先的博客内容并重新上线博客"></a>恢复原先的博客内容并重新上线博客</h2><ol>
+<li><p>将原先的博客文章拷贝到现在的source目录下然后重新deploy</p>
+</li>
+<li><p><strong>修正文章时间出现错误的小bug</strong></p>
+<p> hexo的post发布时间应该是以post的markdown文件front matter(也就是用一组<code>---</code>夹在文件最开头的几行内容)中的<code>date</code>为准，所以在迁移老文章的时候需要留心一下是不是有些文章初次发表的时候出于种种原因没有生成<code>date</code>，如果有，手动写好正确的<code>date</code>，否则(貌似)hexo将会把这篇文章的markdown文件最后保存时间作为发布时间，引起一些小小的时空扰动。</p>
+</li>
+</ol>
+<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>到这里全部工作就完成了，可选的内容是设置next主题的主题(没错，next自带四种变体主题)，选一个好看的主题，<code>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server</code>看一下效果，满意的话就deploy到github上。其他花里胡哨的东西(例如评论插件等等)以后再慢慢接触吧。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -264,7 +416,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-29 21:49:47" itemprop="dateModified" datetime="2023-03-29T21:49:47+08:00">2023-03-29</time>
+      <time title="修改时间：2023-04-03 22:48:57" itemprop="dateModified" datetime="2023-04-03T22:48:57+08:00">2023-04-03</time>
     </span>
 
   
@@ -280,6 +432,7 @@
           <p>闲话：我是个抗干扰能力非常弱的人，尤其是在我学习的时候。可惜我有一个喜欢串门的fellow，所以在他到我这里来喋喋不休的时候我就会做点别的不需要这么专注的事情。这次我打算换一下我的hexo博客的主题。</p>
 <h2 id="polarbear主题"><a href="#polarbear主题" class="headerlink" title="polarbear主题"></a>polarbear主题</h2><p>hexo自带的landscape主题看起来不够简单清爽，之前在hexo theme上找了一段时间，看到了<a target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">polarbear</a>这一款，外观干净，专注于内容，这和我的理念很接近，所以想换一下。<br>但是在第一步安装依赖plugin就error了，检查报错信息，得知问题原因大概是npm和node版本过旧。</p>
 <h2 id="更新node和npm版本"><a href="#更新node和npm版本" class="headerlink" title="更新node和npm版本"></a>更新node和npm版本</h2><p>在更新node和npm的时候才知道后悔，当初安装node的时候应该是使用了binary安装包，并且手动指定了安装路径，这种安装方式是独立于apt包管理体系之外的，升级有诸多不便。<br>本想把手动安装的这套node彻底卸载，但是我的hexo博客框架就装在这一套node里，因为担心卸载以后出现一些奇怪的连锁反应，所以只能暂时放弃，打算等我研究明白hexo init会发生哪些事情、是否会对环境产生依赖等等问题，再做node和npm的更新或者卸载。</p>
+<h2 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h2><p>简断截说，最终我彻底翻新了整个hexo博客，其中曲折详见我的另一篇post内容。</p>
 
       
     </div>
