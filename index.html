@@ -116,7 +116,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -138,6 +138,97 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/04/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Joe Zhang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joe Zhang's Encyclopedia">
+      <meta itemprop="description" content="我正在装修中的博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Joe Zhang's Encyclopedia">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/04/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">算法时间复杂度分析</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-04 23:44:38 / 修改时间：23:44:54" itemprop="dateCreated datePublished" datetime="2023-04-04T23:44:38+08:00">2023-04-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="干货小结-TL-DR"><a href="#干货小结-TL-DR" class="headerlink" title="干货小结(TL;DR)"></a>干货小结(TL;DR)</h2><ol>
+<li><p>算法的运行时间不仅受到数据规模n的影响，还受到数据具体情况的影响(例如文中插入排序的例子)。</p>
+</li>
+<li><p>考虑一个算法的渐近时间复杂度的时候，一定要注意区分三种情况：最坏情况(用Big O notation)、最好情况(用Omega notation)、一般情况(用Theta notation)。</p>
+</li>
+<li><p>快速排序(quick sort)的最坏情况渐近时间复杂度为O(n^2)，最好情况渐近时间复杂度为Ω(nlogn)，一般情况渐近时间复杂度为Θ(nlogn)，<a target="_blank" rel="noopener" href="https://towardsdatascience.com/an-overview-of-quicksort-algorithm-b9144e314a72">这里是参考网站</a>。</p>
+</li>
+</ol>
+<hr>
+<h2 id="关于算法运行的最坏情况-worst-case-、最好情况-best-case-、一般情况-average-case"><a href="#关于算法运行的最坏情况-worst-case-、最好情况-best-case-、一般情况-average-case" class="headerlink" title="关于算法运行的最坏情况(worst case)、最好情况(best case)、一般情况(average case)"></a>关于算法运行的最坏情况(worst case)、最好情况(best case)、一般情况(average case)</h2><p>首先，我们需要考虑的问题是如何大致估计一个算法的运行时间。<br>答案是，假设各种类型的操作单元(例如加、减、乘、除、赋值等等操作)运行时间都相同，然后只需要统计完整运行算法时执行的操作次数f(n)，就可以进行算法运行时间的估计。这里的n是数据规模。<br>当然，运行一个算法的操作次数f(n)除了受到数据规模n的影响以外，还会受到数据本身具体情况的影响。</p>
+<p>例如，对一个存放有1到n的长度为n的数组进行从小到大的<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/insertion-sort.html"><em>插入排序</em></a>。<br>在最坏情况下，数据是n到1倒着排的，那么插入排序算法需要1+2+…+(n-1)&#x3D;n*(n-1)&#x2F;2次操作才能完成，f(n)&#x3D;n(n-1)&#x2F;2；<br>在最好情况下，数据本身就是1到n从小到大排好的，那么插入排序算法只需要n次操作就可以完成，f(n)&#x3D;n；<br>在一般情况下，数组中的1到n随机摆放，插入排序算法的操作次数f(n)介于n次和n*(n-1)&#x2F;2次之间，当然，如果要具体计算的话，需要求出在1到n的所有可能的排列情况下操作次数的期望值。</p>
+<p>所以，对于一个具体的算法来说，一定要注意算法操作次数f(n)有worst case、best case、average case三种情况。</p>
+<hr>
+<h2 id="渐近时间复杂度-asymptotic-time-complexity-是什么"><a href="#渐近时间复杂度-asymptotic-time-complexity-是什么" class="headerlink" title="渐近时间复杂度(asymptotic time complexity)是什么"></a>渐近时间复杂度(asymptotic time complexity)是什么</h2><p>很显然，对于不同类型的函数f(n)(例如n的指数函数或者n的多项式函数)，随着n的增长，f(n)增长速度也不同。<br>因此，为了方便描述和比较不同类型的算法<strong>在数据规模n非常大的情况下，随着n的变化，运行时间如何变化</strong>，考虑算法的<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Time_complexity#:~:text=one%20commonly%20focuses%20on%20the%20behavior%20of%20the%20complexity%20when%20the%20input%20size%20increases%E2%80%94that%20is%2C%20the%20asymptotic%20behavior%20of%20the%20complexity."><strong>渐近时间复杂度(asymptotic time complexity)</strong></a>。</p>
+<p>最常用的<a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/asymptotic-notation-and-analysis-based-on-input-size-of-algorithms/?ref=lbp#:~:text=The%20three%20most%20commonly%20used%20notations">三种渐近时间复杂度表示方法</a>是大O(Big O notation)、Ω(Omega notation)、Θ(Theta notation)，分别用来对算法在最坏情况、最好情况和一般情况下的操作次数作出渐近分类。</p>
+<p>简单地理解，渐近时间复杂度就是对数据规模为n时，算法运行的操作次数f(n)的函数类型做出了区分。<br>例如，当f(n)是指数函数时，最坏情况下渐进时间复杂度用O(2^n)表示；<br>当f(n)是多项式函数时，最坏情况下渐近时间复杂度用O(n^2)表示。</p>
+<hr>
+<h2 id="渐进时间复杂度中为什么忽略系数以及对数logn中的底数？"><a href="#渐进时间复杂度中为什么忽略系数以及对数logn中的底数？" class="headerlink" title="渐进时间复杂度中为什么忽略系数以及对数logn中的底数？"></a>渐进时间复杂度中为什么忽略系数以及对数logn中的底数？</h2><p>这是因为，按照我目前的理解，渐近时间复杂度的目的只是为了区分不同算法<strong>在数据规模n非常大的情况下，随着n的变化，运行时间如何变化</strong>，因此，只需要知道“指数函数比多项式函数增长快”、“对数函数比一次函数增长速度慢”等等这样的概念就足够了，而进行上述比较时，系数以及底数是无关紧要的。</p>
+<p>这样，我们面对最坏情况渐近时间复杂度为O(2^n)的算法A和最坏情况渐近时间复杂度为O(n^2)的算法B时，就可以给出论断：<br>在数据量很大的时候，最坏情况下，算法A<strong>大概率</strong>比算法B需要更多的操作，因此也会<strong>大概率</strong>更慢(这里之所以强调<strong>大概率</strong>，是因为渐近时间复杂度忽略了系数等等，严格来说，在数据量不够大的时候直接用来做比较很可能没有意义，例如1000000n和2^n这两个函数，虽然前者比后者增长慢，但是在n&#x3D;10的时候显然是1000000n更大)。</p>
+<p>而至于诸如“算法A的操作次数f1(n)&#x3D;2n，算法B的操作次数f2(n)&#x3D;3n，所以算法A比算法B更好”这样的“绝对比较”，并不是渐近时间复杂度所需要考虑的范畴。</p>
+<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>这篇文章是校本部图书馆清明假期闭馆期间，在图书馆旁边的Joy Cafe(中文名好像叫悦生活咖啡)咖啡店喝着美式咖啡写下的。店员小姐姐认真招待客人的样子真好看，声音也很好听，店里的BGM也很不错。</p>
+<p>在店里听到的两首好听的BGM是：《是非题》、《遇见你的时候所有星星都落到我头上》。下次你喝着咖啡学算法的时候，不妨放来听听。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
