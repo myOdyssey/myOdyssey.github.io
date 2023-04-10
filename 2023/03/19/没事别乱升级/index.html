@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="原来安装的MySQL5.7版本用来做TinyWebServer的项目，OS版本是基于Ubuntu Focal Fossa的Linux Mint Una，用得好好的，前几天Mint系统报告提示我有新的大版本升级，让我升到Vanessa，然后一番操作好不容易升级到了Vanessa，又来一个系统报告让我升级到Vera，我心想送佛送到西，既然要升级索性就升级到最新的，结果这一升级就出问题了，MySQL5.">
 <meta property="og:type" content="article">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="原来安装的MySQL5.7版本用来做TinyWebServer的项目，OS版本是基于Ubuntu Focal Fossa的Linux Mint Una，用得好好的，前几天Mint系统报告提示我有新的大版本升级，让我升到Vanessa，然后一番操作好不容易升级到了Vanessa，又来一个系统报告让我升级到Vera，我心想送佛送到西，既然要升级索性就升级到最新的，结果这一升级就出问题了，MySQL5.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-18T17:23:54.000Z">
-<meta property="article:modified_time" content="2023-03-29T04:48:33.784Z">
+<meta property="article:modified_time" content="2023-04-10T10:46:21.350Z">
 <meta property="article:author" content="Joe Zhang">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -64,6 +64,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -85,6 +88,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+  </ul>
+</nav>
 
 
 
@@ -112,6 +119,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joe Zhang"
+      src="/uploads/conan.jpg">
   <p class="site-author-name" itemprop="name">Joe Zhang</p>
   <div class="site-description" itemprop="description">我正在装修中的博客</div>
 </div>
@@ -123,15 +132,25 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span>
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
 
         </div>
       </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
 
     
@@ -154,7 +173,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/19/%E6%B2%A1%E4%BA%8B%E5%88%AB%E4%B9%B1%E5%8D%87%E7%BA%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -187,7 +206,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-29 12:48:33" itemprop="dateModified" datetime="2023-03-29T12:48:33+08:00">2023-03-29</time>
+      <time title="修改时间：2023-04-10 18:46:21" itemprop="dateModified" datetime="2023-04-10T18:46:21+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">工作</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
     </span>
 
   
@@ -201,6 +233,8 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>原来安装的<code>MySQL5.7</code>版本用来做<code>TinyWebServer</code>的项目，OS版本是基于<code>Ubuntu Focal Fossa</code>的<code>Linux Mint Una</code>，用得好好的，前几天Mint系统报告提示我有新的大版本升级，让我升到<code>Vanessa</code>，然后一番操作好不容易升级到了<code>Vanessa</code>，又来一个系统报告让我升级到<code>Vera</code>，我心想送佛送到西，既然要升级索性就升级到最新的，结果这一升级就出问题了，<code>MySQL5.7</code>被移除了。</p>
+<span id="more"></span>
+
 <p>又是一番trial and error，最后发现5.7版本的最高支持系统是<code>Ubuntu18.04</code>（那我<code>Focal Fossa</code>为什么还能装？？？），检查了软件源，确实，在<code>Ubuntu Jammy Jellyfish</code>的仓库里面已经没有<code>MySQL5.7</code>了，通过<code>apt</code>安装属于回天无力。</p>
 <p>所想用5.7以只剩下手动安装这条路了，查了下文档，前置条件是需要干净地卸载前任安装。然而<code>sudo find / -name mysql</code>出来一堆东西，说明之前的<code>MySQL</code>卸载又没卸载干净，真的折磨。所以或许5.7索性就不装了吧，时代的弃儿，（或许）改改<code>TinyWebServer</code>的代码，用<code>MySQL8</code>吧…</p>
 <p>折磨BGM（在这一系列操作过程中在我脑海中循环的音乐）：<strong>胸がドキドキ</strong>，下次你搞Linux，不妨放来听听。</p>
@@ -260,7 +294,7 @@
 
 
 <div class="copyright">
-  &copy; 
+  &copy; 2022 – 
   <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -274,10 +308,6 @@
   </footer>
 
   
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>

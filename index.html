@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="我正在装修中的博客">
 <meta property="og:type" content="website">
@@ -61,6 +61,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -82,6 +85,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+  </ul>
+</nav>
 
 
 
@@ -109,6 +116,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joe Zhang"
+      src="/uploads/conan.jpg">
   <p class="site-author-name" itemprop="name">Joe Zhang</p>
   <div class="site-description" itemprop="description">我正在装修中的博客</div>
 </div>
@@ -120,15 +129,25 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">标签</span>
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
 
         </div>
       </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
 
     
@@ -150,7 +169,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/05/%E6%B8%85%E6%98%8E%E5%B0%8F%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -175,9 +194,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-04-05 21:25:53 / 修改时间：21:33:33" itemprop="dateCreated datePublished" datetime="2023-04-05T21:25:53+08:00">2023-04-05</time>
+      <time title="创建时间：2023-04-05 21:25:53" itemprop="dateCreated datePublished" datetime="2023-04-05T21:25:53+08:00">2023-04-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-10 18:46:28" itemprop="dateModified" datetime="2023-04-10T18:46:28+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">思考</span></a>
+        </span>
     </span>
 
   
@@ -191,23 +229,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>首先，简单介绍<a href="#%E8%BF%91%E6%97%A5">我的近况</a>。然后是一段<a href="#%E4%BD%95%E5%A4%84">关于主动性的思考</a>。接着是<a href="#%E9%87%8D%E8%A6%81">关于人际沟通的思考</a>。最后是<a href="#%E9%AB%98%E6%95%88">关于高效率的思考</a>。</p>
-<h2 id="近日"><a href="#近日" class="headerlink" title="近日"></a>近日</h2><p>近期我在江阴校区做科研，希望尽快把实验做成，写好论文(不是毕业论文，而是强制要求发的论文)投稿，然后就可以暂时抛下科研上的工作，回到本部专注准备秋招。不过小导师最近一直忙着开各种会议，目前在本部筹备开某某项目启动会，特地把我这一届的fellow都叫来，今天明天要在本部待命帮忙。出发之前我就心想可能是来帮忙布置会场打打杂的，果然不出意料。</p>
-<p>目前我认为重要的任务只有两件，写论文和准备找工作，其他的都不重要(比如这次来本部打杂、课题组内开会、课题组内讲论文等等)。但我没有能力做到超然世外，把它们全部不管不顾，我甚至还会来写博客。</p>
-<h2 id="何处"><a href="#何处" class="headerlink" title="何处"></a>何处</h2><p>刚好图书馆在清明节期间闭馆，本来就没有本部工位的我就没什么好的学习地点可以去了。下午一点多，我正在图书馆旁边的Joy Cafe，在店里点一杯尽可能无糖的饮品，打算在这儿学习。</p>
-<p>昨晚这里的氛围还挺宁静的(详见我昨天写的算法时间复杂度分析“题外话”部分)，但此时店里的音乐有点吵，我的心境也有些浮躁，喝完刚点的不额外加糖的燕麦奶茶之后，我觉得此时此地，学不下去。所以我并不知道到哪学习比较好。同时我想到，如果论文投稿之后回到没有工位的本部，我就又要天天背着电脑包去图书馆了。</p>
-<p><strong>然而我知道，只要主观上愿意学习，并且周围环境不要太过喧嚣，总能学进去。客观条件确实会限制行动，但起决定性的是人的主观做法吧。</strong>别想太多。</p>
-<h2 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h2><p>之前在<a target="_blank" rel="noopener" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a>上读到过这样的观念：即使你很急也不要在提问的标题写“紧急”二字，原因如下：</p>
-<blockquote>
-<p>这是你的问题，不是我们的。宣称紧急极有可能事与愿违：大多数黑客会直接删除无礼和自私地企图即时引起关注的问题。更严重的是，紧急这个字（或是其他企图引起关注的标题）通常会被垃圾信过滤器过滤掉 —— 你希望能看到你问题的人可能永远也看不到。</p>
-<p>…</p>
-<p>… 譬如从 NASA 国际空间站（International Space Station）发这样的标题没有问题，但用自我感觉良好的慈善行为或政治原因发肯定不行。事实上，张贴诸如紧急：帮我救救这个毛茸茸的小海豹！肯定让你被黑客忽略或惹恼他们，即使他们认为毛茸茸的小海豹很重要。</p>
-</blockquote>
-<p>同样，我认为“重要”这个概念类似，每个人心中“重要”的东西差别很大，所以每次我的导师跟我提到“我有一个重要会议，需要你帮忙”的时候，我的内心反应都是：可是这对我来说完全不重要(甚至就算会议最终搞砸了我也无所谓)。不用误会，我明白人为刀俎我为鱼肉的道理，所以确实会好好帮忙，从而帮助我获得导师的认可，扫除我在毕业的道路上的一些隐患。<strong>但是我猜导师正在试图通过让我觉得这件事很重要，从而让我认真对待它，果真如此的话，这无异于对牛弹琴。</strong></p>
-<h2 id="高效"><a href="#高效" class="headerlink" title="高效"></a>高效</h2><p>如果你觉得“我热爱工作，工作就是我生活不可分割的重要部分”，那么这一个section你不需要看。这里说的高效指的是“牺牲甚至浪费一些生活，从而加快完成工作”；这里说的“生活”与“工作”是对立的概念，指的是“为了谋求更好的生活而工作”之外的东西。</p>
-<p>这次某某项目启动会的主办者是我的大导师，一个工作狂人(中性)。会议设置在了清明节法定假日期间，这很高效。<strong>值得注意的是，其实清明节不仅是法定节假日，更是中国四大传统节日春节、清明、端午、中秋之一。</strong></p>
-<p>为了筹备会议，我的小导师和小导师的fellow们，我和我的fellow们，以及学校方面的工作人员们都没有闲着。下午我在帮助理一起打印会议手册的时候，助理诉苦说他明明请了十天的假回家过清明，结果大导师临时把他叫过来，今天凌晨四点多出发长途开车来学校，现在直犯困；从早上开始就一直在帮忙布置会场的M女士(私下交谈才知道她是仅仅比我高一届的学姐，今年刚毕业，留校在行政岗位工作)感叹说她现在还没正式到岗，就已经因为处理各种杂事忙得不可开交，以至于连毕业照都没有时间拍。在我可见的地方，有这样一批人为了高效牺牲了一些生活。在我看不见的地方，应该有更多的人在做更高效的事情，一个简单的例子就是中国的快递行业和外卖行业。</p>
-<p>就我所知，其他国家似乎没有那么高效，所以很多人出国以后会不习惯，但没那么高效的生活到底感觉如何，我并无发言权，也很想体验一下。所以一个开放的问题是，你觉得这种高效值得吗？</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/05/%E6%B8%85%E6%98%8E%E5%B0%8F%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -236,7 +265,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/04/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -269,7 +298,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-05 12:50:22" itemprop="dateModified" datetime="2023-04-05T12:50:22+08:00">2023-04-05</time>
+      <time title="修改时间：2023-04-10 18:48:29" itemprop="dateModified" datetime="2023-04-10T18:48:29+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">工作</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
     </span>
 
   
@@ -290,21 +332,14 @@
 <li><p>快速排序(quick sort)的最坏情况渐近时间复杂度为O(n^2)，最好情况渐近时间复杂度为Ω(nlogn)，一般情况渐近时间复杂度为Θ(nlogn)，<a target="_blank" rel="noopener" href="https://towardsdatascience.com/an-overview-of-quicksort-algorithm-b9144e314a72">这里是参考网站</a>。</p>
 </li>
 </ol>
-<hr>
-<h2 id="关于算法运行的最坏情况-worst-case-、最好情况-best-case-、一般情况-average-case"><a href="#关于算法运行的最坏情况-worst-case-、最好情况-best-case-、一般情况-average-case" class="headerlink" title="关于算法运行的最坏情况(worst case)、最好情况(best case)、一般情况(average case)"></a>关于算法运行的最坏情况(worst case)、最好情况(best case)、一般情况(average case)</h2><p>首先，我们需要考虑的问题是如何大致估计一个算法的运行时间。<br>答案是，假设各种类型的操作单元(例如加、减、乘、除、赋值等等操作)运行时间都相同，然后只需要统计完整运行算法时执行的操作次数f(n)，就可以进行算法运行时间的估计。这里的n是数据规模。<br>当然，运行一个算法的操作次数f(n)除了受到数据规模n的影响以外，还会受到数据本身具体情况的影响。</p>
-<p>例如，对一个存放有1到n的长度为n的数组进行从小到大的<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/insertion-sort.html"><em>插入排序</em></a>。<br>在最坏情况下，数据是n到1倒着排的，那么插入排序算法需要1+2+…+(n-1)&#x3D;n*(n-1)&#x2F;2次操作才能完成，f(n)&#x3D;n(n-1)&#x2F;2；<br>在最好情况下，数据本身就是1到n从小到大排好的，那么插入排序算法只需要n次操作就可以完成，f(n)&#x3D;n；<br>在一般情况下，数组中的1到n随机摆放，插入排序算法的操作次数f(n)介于n次和n*(n-1)&#x2F;2次之间，当然，如果要具体计算的话，需要求出在1到n的所有可能的排列情况下操作次数的期望值。</p>
-<p>所以，对于一个具体的算法来说，一定要注意算法操作次数f(n)有worst case、best case、average case三种情况。</p>
-<hr>
-<h2 id="渐近时间复杂度-asymptotic-time-complexity-是什么"><a href="#渐近时间复杂度-asymptotic-time-complexity-是什么" class="headerlink" title="渐近时间复杂度(asymptotic time complexity)是什么"></a>渐近时间复杂度(asymptotic time complexity)是什么</h2><p>很显然，对于不同类型的函数f(n)(例如n的指数函数或者n的多项式函数)，随着n的增长，f(n)增长速度也不同。<br>因此，为了方便描述和比较不同类型的算法<strong>在数据规模n非常大的情况下，随着n的变化，运行时间如何变化</strong>，考虑算法的<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Time_complexity#:~:text=one%20commonly%20focuses%20on%20the%20behavior%20of%20the%20complexity%20when%20the%20input%20size%20increases%E2%80%94that%20is%2C%20the%20asymptotic%20behavior%20of%20the%20complexity."><strong>渐近时间复杂度(asymptotic time complexity)</strong></a>。</p>
-<p>最常用的<a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/asymptotic-notation-and-analysis-based-on-input-size-of-algorithms/?ref=lbp#:~:text=The%20three%20most%20commonly%20used%20notations">三种渐近时间复杂度表示方法</a>是大O(Big O notation)、Ω(Omega notation)、Θ(Theta notation)，分别用来对算法在最坏情况、最好情况和一般情况下的操作次数作出渐近分类。</p>
-<p>简单地理解，渐近时间复杂度就是对数据规模为n时，算法运行的操作次数f(n)的函数类型做出了区分。<br>例如，当f(n)是指数函数时，最坏情况下渐进时间复杂度用O(2^n)表示；<br>当f(n)是二次函数时，最坏情况下渐近时间复杂度用O(n^2)表示。</p>
-<hr>
-<h2 id="渐进时间复杂度中为什么忽略系数以及对数logn中的底数？"><a href="#渐进时间复杂度中为什么忽略系数以及对数logn中的底数？" class="headerlink" title="渐进时间复杂度中为什么忽略系数以及对数logn中的底数？"></a>渐进时间复杂度中为什么忽略系数以及对数logn中的底数？</h2><p>这是因为，按照我目前的理解，渐近时间复杂度的目的只是为了区分不同算法<strong>在数据规模n非常大的情况下，随着n的变化，运行时间如何变化</strong>，因此，只需要知道“指数函数比多项式函数增长快”、“对数函数比一次函数增长速度慢”等等这样的概念就足够了，而进行上述比较时，系数以及底数是无关紧要的。</p>
-<p>这样，我们面对最坏情况渐近时间复杂度为O(2^n)的算法A和最坏情况渐近时间复杂度为O(n^2)的算法B时，就可以给出论断：<br>在数据量很大的时候，最坏情况下，算法A<strong>大概率</strong>比算法B需要更多的操作，因此也会<strong>大概率</strong>更慢(这里之所以强调<strong>大概率</strong>，是因为渐近时间复杂度忽略了系数等等，严格来说，在数据量不够大的时候直接用来做比较很可能没有意义，例如1000000n和2^n这两个函数，虽然前者比后者增长慢，但是在n&#x3D;10的时候显然是1000000n更大)。</p>
-<p>而至于诸如“算法A的操作次数f1(n)&#x3D;2n，算法B的操作次数f2(n)&#x3D;3n，所以算法A比算法B更好”这样的“绝对比较”，并不是渐近时间复杂度所需要考虑的范畴。</p>
-<h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><p>这篇文章是校本部图书馆清明假期闭馆期间，在图书馆旁边的Joy Cafe(中文名好像叫悦生活咖啡)咖啡店喝着美式咖啡写下的。店员小姐姐认真招待客人的样子真好看，声音也很好听，店里的BGM也很不错。</p>
-<p>在店里听到的两首好听的BGM是：《是非题》、《遇见你的时候所有星星都落到我头上》。下次你喝着咖啡学算法的时候，不妨放来听听。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/04/%E7%AE%97%E6%B3%95%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -333,7 +368,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/03/hexo%E5%8D%9A%E5%AE%A2%E7%BF%BB%E6%96%B0%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -358,9 +393,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-04-03 22:43:39 / 修改时间：22:44:17" itemprop="dateCreated datePublished" datetime="2023-04-03T22:43:39+08:00">2023-04-03</time>
+      <time title="创建时间：2023-04-03 22:43:39" itemprop="dateCreated datePublished" datetime="2023-04-03T22:43:39+08:00">2023-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-10 18:49:43" itemprop="dateModified" datetime="2023-04-10T18:49:43+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E5%85%B4%E8%B6%A3/" itemprop="url" rel="index"><span itemprop="name">兴趣</span></a>
+        </span>
     </span>
 
   
@@ -385,78 +439,14 @@
 </li>
 </ul>
 <p>因为目前为止我的博客不过就是几篇文章的集合罢了，没有什么复杂精细的巧妙构造，也没人看，所以保存好这几篇文章的md文件就可以，其他一切内容都可以全部推倒重来。因此决定重建整个hexo博客。</p>
-<h2 id="下线博客"><a href="#下线博客" class="headerlink" title="下线博客"></a>下线博客</h2><ol>
-<li><p>备份整个博客文件夹</p>
-</li>
-<li><p>删除博客托管在github上的相关内容</p>
-<ul>
-<li><p>首先删除<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">github personal access token</a></p>
-</li>
-<li><p>然后删除整个博客托管所在的github仓库(这样博客就下线了，访问会出现github的定制404页面)</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="重新安装node和hexo"><a href="#重新安装node和hexo" class="headerlink" title="重新安装node和hexo"></a>重新安装node和hexo</h2><ol>
-<li><p>彻底卸载本地自定义目录下的node框架</p>
-<ul>
-<li><p>用<code>sudo find / -name &quot;node&quot;</code>检查node的位置之后直接删掉node所在的整个自定义文件夹，以及误装在系统上的<code>/usr/local/bin/node</code>。</p>
-</li>
-<li><p>再次<code>find</code>清理掉剩下的相关文件。</p>
-</li>
-</ul>
-</li>
-<li><p>到<a target="_blank" rel="noopener" href="https://nodejs.org/en">node.js官网</a>安装node</p>
-<ul>
-<li><p>使用snap安装node<code>sudo snap install node --classic</code>。</p>
-</li>
-<li><p>检查一下<code>node</code>和<code>npm</code>的版本，确实是最新的。</p>
-</li>
-</ul>
-</li>
-<li><p>使用<code>node</code>重新安装hexo框架</p>
-<ul>
-<li><p><code>sudo npm install -g hexo-cli</code>。</p>
-</li>
-<li><p>检查版本<code>hexo --version</code>。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="使用hexo重建一个全新博客"><a href="#使用hexo重建一个全新博客" class="headerlink" title="使用hexo重建一个全新博客"></a>使用hexo重建一个全新博客</h2><ol>
-<li><p>建立博客文件夹并且<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/setup">建站</a>。</p>
-</li>
-<li><p>安装<a target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">polarbear主题</a>的<strong>大失败</strong></p>
-<ul>
-<li><p>安装遇到奇怪error，<a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions#debinstall">使用binary distributions重装node</a>，然后重新安装hexo，重新建站。</p>
-</li>
-<li><p>hexo-renderer-scss安装失败(陈旧的东西总是出问题，再次曲线救国，换其他主题，天涯何处无芳草)。</p>
-</li>
-</ul>
-</li>
-<li><p>决定使用next主题</p>
-<p> next主题是一个维护非常活跃的主题，这意味着很多问题都能得搜得到解决方案，所以是减少折腾、方便学习的好选择，虽然在我看来美观性有待提高。</p>
-</li>
-<li><p>使用next主题配置部署初始博客到github</p>
-<ul>
-<li><p>先<a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/getting-started/#Checking-NexT">get started</a>，按照说明配置next主题。</p>
-</li>
-<li><p>然后参考<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/github-pages">在 GitHub Pages 上部署 Hexo</a>，按照说明建好github的repo给博客使用。</p>
-</li>
-<li><p>使用<a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">一键部署</a>，通过修改<code>_config.yml</code>设置好hexo的<code>deploy</code>相关内容，填写<code>author</code>、网站<code>title</code>和<code>subtitle</code>、网站<code>description</code>等等，并部署到github(需要设置personal access token)。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="恢复原先的博客内容并重新上线博客"><a href="#恢复原先的博客内容并重新上线博客" class="headerlink" title="恢复原先的博客内容并重新上线博客"></a>恢复原先的博客内容并重新上线博客</h2><ol>
-<li><p>将原先的博客文章拷贝到现在的source目录下然后重新deploy</p>
-</li>
-<li><p><strong>修正文章时间出现错误的小bug</strong></p>
-<p> hexo的post发布时间应该是以post的markdown文件front matter(也就是用一组<code>---</code>夹在文件最开头的几行内容)中的<code>date</code>为准，所以在迁移老文章的时候需要留心一下是不是有些文章初次发表的时候出于种种原因没有生成<code>date</code>，如果有，手动写好正确的<code>date</code>，否则(貌似)hexo将会把这篇文章的markdown文件最后保存时间作为发布时间，引起一些小小的时空扰动。</p>
-</li>
-</ol>
-<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>到这里全部工作就完成了，可选的内容是设置next主题的主题(没错，next自带四种变体主题)，选一个好看的主题，<code>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server</code>看一下效果，满意的话就deploy到github上。其他花里胡哨的东西(例如评论插件等等)以后再慢慢接触吧。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/03/hexo%E5%8D%9A%E5%AE%A2%E7%BF%BB%E6%96%B0%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -485,7 +475,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/03/%E4%BD%BF%E7%94%A8RD-Client%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5Linux%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -510,9 +500,28 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-04-03 22:00:15 / 修改时间：22:01:28" itemprop="dateCreated datePublished" datetime="2023-04-03T22:00:15+08:00">2023-04-03</time>
+      <time title="创建时间：2023-04-03 22:00:15" itemprop="dateCreated datePublished" datetime="2023-04-03T22:00:15+08:00">2023-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-10 18:47:56" itemprop="dateModified" datetime="2023-04-10T18:47:56+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">工作</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
     </span>
 
   
@@ -525,19 +534,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ol>
-<li><p><code>xrdp</code>服务可用</p>
-<p> 首先需要被连接的电脑安装了<code>xrdp</code>，并且服务处于运行状态，监听端口号一般默认为<code>3389</code>，当然也可以自定义其他端口，我的<code>xrdp</code>默认监听<code>3389</code>号端口。</p>
-</li>
-<li><p>网络环境可达</p>
-<p> 被连接的机器和客户端机器需要处在同一个局域网下(如果不在同一个局域网下似乎可以通过配置被连接机器的网关设备，并且在RD Client上设置通过网关连接，实现客户端机器从Internet穿透访问被连接的机器的效果)。我的客户端(iPad)和被连接的机器(Linux笔记本电脑)都在校园网下，所以条件满足。</p>
-</li>
-<li><p>图形界面Session唯一</p>
-<p> 被连接的机器上目前没有图形界面Session正在运行(这一点我可能描述不严谨，总之，不要log in到电脑桌面环境去)。<strong>注意这一前提条件非常容易导致连接失败故障，因为如果没有log in到桌面环境可能会导致<code>xrdp</code>服务处于未运行状态，而log in到桌面环境去启动<code>xrdp</code>又会导致图形界面Session不唯一，客户端无法成功连接。解决方法是切换到文本界面(tty模式)然后log in自己的账号，这样就会自动启动<code>xrdp</code>服务(注意是自己的账号，log in root可能无法带起<code>xrdp</code>服务，至少在我的电脑上是这样的)。</strong></p>
-</li>
-</ol>
-<h2 id="客户端操作"><a href="#客户端操作" class="headerlink" title="客户端操作"></a>客户端操作</h2><p>这一部分没有什么技术含量可言，在RD Client的App里写好被连接机器的IP地址，然后凭借自己的账号密码登录就可以远程使用电脑桌面环境了。</p>
-
+          <p>如题，简单记录通过RD Client连接Linux桌面环境的注意事项用于以后参考。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/04/03/%E4%BD%BF%E7%94%A8RD-Client%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5Linux%E6%A1%8C%E9%9D%A2%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -566,7 +571,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/28/%E6%9B%B4%E6%8D%A2hexo%E4%B8%BB%E9%A2%98%E5%BC%95%E8%B5%B7%E7%9A%84%E8%BF%9E%E9%94%81%E5%8F%8D%E5%BA%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -599,7 +604,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-03 22:48:57" itemprop="dateModified" datetime="2023-04-03T22:48:57+08:00">2023-04-03</time>
+      <time title="修改时间：2023-04-10 18:44:57" itemprop="dateModified" datetime="2023-04-10T18:44:57+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E5%85%B4%E8%B6%A3/" itemprop="url" rel="index"><span itemprop="name">兴趣</span></a>
+        </span>
     </span>
 
   
@@ -613,10 +631,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>闲话：我是个抗干扰能力非常弱的人，尤其是在我学习的时候。可惜我有一个喜欢串门的fellow，所以在他到我这里来喋喋不休的时候我就会做点别的不需要这么专注的事情。这次我打算换一下我的hexo博客的主题。</p>
-<h2 id="polarbear主题"><a href="#polarbear主题" class="headerlink" title="polarbear主题"></a>polarbear主题</h2><p>hexo自带的landscape主题看起来不够简单清爽，之前在hexo theme上找了一段时间，看到了<a target="_blank" rel="noopener" href="https://github.com/frostfan/hexo-theme-polarbear">polarbear</a>这一款，外观干净，专注于内容，这和我的理念很接近，所以想换一下。<br>但是在第一步安装依赖plugin就error了，检查报错信息，得知问题原因大概是npm和node版本过旧。</p>
-<h2 id="更新node和npm版本"><a href="#更新node和npm版本" class="headerlink" title="更新node和npm版本"></a>更新node和npm版本</h2><p>在更新node和npm的时候才知道后悔，当初安装node的时候应该是使用了binary安装包，并且手动指定了安装路径，这种安装方式是独立于apt包管理体系之外的，升级有诸多不便。<br>本想把手动安装的这套node彻底卸载，但是我的hexo博客框架就装在这一套node里，因为担心卸载以后出现一些奇怪的连锁反应，所以只能暂时放弃，打算等我研究明白hexo init会发生哪些事情、是否会对环境产生依赖等等问题，再做node和npm的更新或者卸载。</p>
-<h2 id="最终结果"><a href="#最终结果" class="headerlink" title="最终结果"></a>最终结果</h2><p>简断截说，最终我彻底翻新了整个hexo博客，其中曲折详见我的另一篇post内容。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/28/%E6%9B%B4%E6%8D%A2hexo%E4%B8%BB%E9%A2%98%E5%BC%95%E8%B5%B7%E7%9A%84%E8%BF%9E%E9%94%81%E5%8F%8D%E5%BA%94/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -645,7 +667,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/23/C++%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -678,7 +700,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-29 12:48:33" itemprop="dateModified" datetime="2023-03-29T12:48:33+08:00">2023-03-29</time>
+      <time title="修改时间：2023-04-10 18:49:26" itemprop="dateModified" datetime="2023-04-10T18:49:26+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">工作</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
     </span>
 
   
@@ -699,51 +734,14 @@
 </li>
 </ol>
 <p>参考书：C++ Primer(5th edition)以及对应的中文翻译版本。</p>
-<h3 id="学习方法"><a href="#学习方法" class="headerlink" title="学习方法"></a>学习方法</h3><p>书是好书，但是目前只能重点看一部分内容，应试学习，找到工作以后自我提升再细致学习。</p>
-<p>每一章结尾部分有chapter summary(本章小结)和defined terms(术语表)，学完一章一定要看！用来做检查自己学习效果的checklist。</p>
-<ul>
-<li>读书小人儿标记：这是C++基础和核心，重点读</li>
-<li>一堆书标记：高级主题&#x2F;特殊目的主题，跳过或者浏览，用到再学</li>
-<li>放大镜小人儿标记：这是比较复杂的概念，但是对于理解C++语言特别重要，重点读</li>
-</ul>
-<h3 id="C-Primer-5th-edition-内容概览"><a href="#C-Primer-5th-edition-内容概览" class="headerlink" title="C++ Primer(5th edition)内容概览"></a>C++ Primer(5th edition)内容概览</h3><ul>
-<li>第1部分(C++基础)和第2部分(C++标准库)(1到12章)是必须学的基础内容</li>
-<li>第3部分讲怎么写类(13到16章) </li>
-<li>第4部分讲用于构建大型复杂系统的更高级的话题(17到19章)</li>
-</ul>
-<hr>
-<h2 id="Chapter1-Getting-Started-一些收获"><a href="#Chapter1-Getting-Started-一些收获" class="headerlink" title="Chapter1 Getting Started 一些收获"></a>Chapter1 Getting Started 一些收获</h2><ol>
-<li><p>弄清statement和expression、parameter和argument、declaration和definition的概念</p>
-<p> 函数体用<code>&#123;&#125;</code>括住a block of statements(语句)。一个block是0个或者多个statement的序列，而block本身也是一个statement。</p>
-<p> 注意statement和expression的区别，expression一定是有值的。</p>
-<p> In C++ an expression(表达式) yields a result and is composed of one or more operands(操作对象) and (usually) an operator(运算符).</p>
-<p> parameter指的是函数定义里写的括号里面那些名字，argument指的是调用函数的时候传给函数的具体值。</p>
-<p> declaration是声明变量，只分配了内存，没有初始化，而definition对变量初始化了。</p>
-</li>
-<li><p>使用<code>std::cin &gt;&gt; var</code>作为判断条件</p>
-<p> 在英文原版书第一章p15，接收数量不确定的输入当中，根据书上的代码进行编译，发现按回车以后程序并不会停止运行，而是要按下ctrl+d才会结束并且返回。<br> 这就是程序正确的运行逻辑，因为<code>std::cin &gt;&gt; var</code>这个expression的值是<code>std::cin</code>当前的状态(valid或者invalid)，只有读到end-of-file(文件结束符)或者是读到错误的输入才会变成invalid。<br> 而在Unix下输入end-of-file是用ctrl+d的组合按键实现的。</p>
-</li>
-<li><p><strong>关于Unix下的end-of-file</strong></p>
-<p> chapter1.4.4的程序编译(命名为count)运行，输入”1空格2空格3紧接着ctrl+d”，会在输出一行1的计数情况之后阻塞，如果输入”1空格2空格3空格然后ctrl+d”，会在输出两行统计情况之后阻塞，但如果把”1 2 3”写进文本文件data，然后cat data | .&#x2F;count，可以像书上预想的结果一样正确运行，这是为什么呢？</p>
-</li>
-<li><p>重新认识头文件</p>
-<p> 想要用库，就需要包含头文件(header)，例如<code>#include &lt;iostream&gt;</code>，尖括号里面放的东西就叫头文件。</p>
-<p> 头文件(header)一般用<code>.h</code>作为后缀，但是标准库的头文件一般没有后缀。</p>
-<p> 标准库的头文件用<code>&lt;&gt;</code>包围，标准库以外的头文件用<code>&quot;&quot;</code>包围。</p>
-</li>
-<li><p>重新认识类</p>
-<p> 类的作用是提供了一种数据类型(type)(这个数据类型的名字和类名是一样的)，以及这种数据类型可以进行的操作(operations)。</p>
-<p> 类一般定义在相应的头文件里，因此想要使用一个类需要先包含定义这个类的头文件。</p>
-<p> dot运算符(<code>.</code>)只适用于class type的对象，左边必须是类的一个对象，右边必须是一个成员的名字，dot运算符的结果是成员。</p>
-</li>
-<li><p>初始化！初始化！初始化！</p>
-<p> class type的变量如果没有初始化，会默认使用类内定义的初始化。</p>
-<p> 但是定义在函数内部的内置类型变量是默认没有初始化的，这很容易导致bug，所以一定要记得初始化！</p>
-</li>
-</ol>
-<hr>
-<h2 id="Chapter2-Variables-and-Basic-Types"><a href="#Chapter2-Variables-and-Basic-Types" class="headerlink" title="Chapter2 Variables and Basic Types"></a>Chapter2 Variables and Basic Types</h2><p><strong>待续…</strong></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/23/C++%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -772,7 +770,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/19/%E6%B2%A1%E4%BA%8B%E5%88%AB%E4%B9%B1%E5%8D%87%E7%BA%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -805,7 +803,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-29 12:48:33" itemprop="dateModified" datetime="2023-03-29T12:48:33+08:00">2023-03-29</time>
+      <time title="修改时间：2023-04-10 18:46:21" itemprop="dateModified" datetime="2023-04-10T18:46:21+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">工作</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E4%BD%9C/IT/" itemprop="url" rel="index"><span itemprop="name">IT</span></a>
+        </span>
     </span>
 
   
@@ -819,23 +830,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>原来安装的<code>MySQL5.7</code>版本用来做<code>TinyWebServer</code>的项目，OS版本是基于<code>Ubuntu Focal Fossa</code>的<code>Linux Mint Una</code>，用得好好的，前几天Mint系统报告提示我有新的大版本升级，让我升到<code>Vanessa</code>，然后一番操作好不容易升级到了<code>Vanessa</code>，又来一个系统报告让我升级到<code>Vera</code>，我心想送佛送到西，既然要升级索性就升级到最新的，结果这一升级就出问题了，<code>MySQL5.7</code>被移除了。</p>
-<p>又是一番trial and error，最后发现5.7版本的最高支持系统是<code>Ubuntu18.04</code>（那我<code>Focal Fossa</code>为什么还能装？？？），检查了软件源，确实，在<code>Ubuntu Jammy Jellyfish</code>的仓库里面已经没有<code>MySQL5.7</code>了，通过<code>apt</code>安装属于回天无力。</p>
-<p>所想用5.7以只剩下手动安装这条路了，查了下文档，前置条件是需要干净地卸载前任安装。然而<code>sudo find / -name mysql</code>出来一堆东西，说明之前的<code>MySQL</code>卸载又没卸载干净，真的折磨。所以或许5.7索性就不装了吧，时代的弃儿，（或许）改改<code>TinyWebServer</code>的代码，用<code>MySQL8</code>吧…</p>
-<p>折磨BGM（在这一系列操作过程中在我脑海中循环的音乐）：<strong>胸がドキドキ</strong>，下次你搞Linux，不妨放来听听。</p>
-<p>Help，真的没想到升级个系统也会引发熬夜到2点的蝴蝶效应。</p>
-<hr>
-<p>第二天的后续：</p>
-<p><code>MySQL8</code>全部卸载，通过官方下载的旧版本<code>.deb</code>包重装5.7版本。</p>
-<p>按照网上搜来的教程（我竟然还在用CSDN）：</p>
-<ol>
-<li>首先<code>dpkg --list | grep mysql</code>检查所有<code>mysql</code>相关的包</li>
-<li>然后<code>sudo apt-get remove --purge mysql-\*</code>一键卸载这些<code>mysql</code>相关的包</li>
-<li>接下来<code>sudo find / -name mysql</code>找出系统里残留的所有<code>mysql</code>相关文件和目录，删掉</li>
-<li>最后参考<code>MySQL</code>官方安装教程，通过<code>.deb</code>包安装5.7版本的<code>mysql</code></li>
-</ol>
-<p>通过以上的步骤，<code>MySQL5.7</code>重新安装完成。</p>
-<p>重新编译<code>TinyWebServer</code>，发现编译器报错找不到相关的库，再次搜索教程，<code>sudo apt-get install libmysqlclient-dev</code>安装相关库，重新编译，<code>server</code>终于可以正常运行了。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/19/%E6%B2%A1%E4%BA%8B%E5%88%AB%E4%B9%B1%E5%8D%87%E7%BA%A7/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -864,7 +866,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/13/IMBACK/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -897,7 +899,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-29 12:48:33" itemprop="dateModified" datetime="2023-03-29T12:48:33+08:00">2023-03-29</time>
+      <time title="修改时间：2023-04-10 18:49:52" itemprop="dateModified" datetime="2023-04-10T18:49:52+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">思考</span></a>
+        </span>
     </span>
 
   
@@ -911,8 +926,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>很久没有更新posts，现在我回来了。</p>
-<p>当初博客建立有一部分原因是疫情导致的言论管控，而现在，如果不再有反复的话，连疫情本身似乎都已经成了历史，那些在政治乌云下的日子转身离我们而去。生活像永不回头的火车，开上新的轨道，就像白岩松说的那样，“雾气依然很重，前方还是一如既往的模糊，但是，让我们出发吧！走，就有希望。”</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/13/IMBACK/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -941,7 +962,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/24/%E8%81%8A%E8%81%8A%E5%87%A0%E6%AC%BE%E6%B8%B8%E6%88%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -974,7 +995,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-29 12:48:33" itemprop="dateModified" datetime="2023-03-29T12:48:33+08:00">2023-03-29</time>
+      <time title="修改时间：2023-04-10 18:46:01" itemprop="dateModified" datetime="2023-04-10T18:46:01+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E5%85%B4%E8%B6%A3/" itemprop="url" rel="index"><span itemprop="name">兴趣</span></a>
+        </span>
     </span>
 
   
@@ -988,10 +1022,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>这篇post很有凑数之嫌，因为是晚上将近12点开始，赶着写出来的，质量无法保证。最近科研并不顺利，白天对着屏幕写写代码坐坐牢，晚上总想着做点属于自己的事情，填补内心空虚的感觉，所以有时候明知道早睡真的很爽，还是会熬夜到很晚，比如昨晚就打Crimsonland打到四点半，属实离谱。</p>
-<p>但这至少从侧面说明Crimsonland确实好玩。Crimsonland是一款自上而下视角的射击游戏，无脑突突突打怪，确实是在大脑不愿意思考的时候很合适的一种消遣。第一次玩Crimsonland可以追溯到小学，和老弟在乡下老家过暑假。把联想ideapad S10放在沙发上，两个小人儿各搬一张小凳子坐在屏幕前面，因为年龄小双手操作反应不过来，所以轮换着一人按WASD走位，一人开枪，配合得简直是天衣无缝。时光飞逝，现在老弟可能已经快把女朋友送他的Elden Ring打通关了，我还是个从来没耐心碰任何一款魂类游戏的单身狗。</p>
-<p>话说回来，那时候的Crimsonland还是老版本，画面比较粗糙，后来出了重制版，也就是昨晚我打到四点半的那个版本。零几年，国内普遍没什么版权意识，我和老弟玩的Crimsonland自然是盗版的，而且界面全英文，咱也不知道其实这游戏因为有点血腥暴力还有年龄限制，但是快乐就完事了。当然，除了Crimsonland，我童年里还玩过不少制作精美、甚至让我受益良多的游戏，比如Drawn: The Painted Tower，Machinarium，Crayon Phisics等等，甚至到现在我都记得Drawn: The Painted Tower开场CG里老人的呼唤（”You must find her, and you must save her! …”）。我英语比别人好一些，和小时候玩这些英文游戏可能有关系。</p>
-<p>行了行了，该睡了，敷衍性质地总结一下，拒绝白嫖，是对开发者的尊重和鼓励。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/24/%E8%81%8A%E8%81%8A%E5%87%A0%E6%AC%BE%E6%B8%B8%E6%88%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1020,7 +1058,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/13/A-rainy-night's-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/conan.jpg">
       <meta itemprop="name" content="Joe Zhang">
     </span>
 
@@ -1053,7 +1091,20 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-29 21:47:43" itemprop="dateModified" datetime="2023-03-29T21:47:43+08:00">2023-03-29</time>
+      <time title="修改时间：2023-04-10 18:49:04" itemprop="dateModified" datetime="2023-04-10T18:49:04+08:00">2023-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%80%9D%E8%80%83/" itemprop="url" rel="index"><span itemprop="name">思考</span></a>
+        </span>
     </span>
 
   
@@ -1067,23 +1118,14 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>我的第一篇post！</p>
-<h2 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h2><h3 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">echo</span> <span class="string">&quot;我写博客，是为了寻找或者定义一个我认为的自由之处。&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>写博客的想法可能很早以前就有了，但是在2021年，也就是读本科的最后一年，才正式地出现在了我的“想做的事情清单”里。由于我行动力不强，这个想法就此被搁置下来，直到现在，研究生一年级接近尾声的时候，才正式实施。</p>
-<p>不过对此我还是很开心的，因为better late than never嘛，哈哈。但我还是爱偷懒，就是说，你会觉得这篇post看起来和Hello World那篇post长得很像。没错，因为它的markdown源码是从Hello World复制下来的，结构大致没变，只是简单地修改了内容而已。</p>
-<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; init <span class="string">&quot;A rainy night&#x27;s blog&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>这个博客的名字几乎是随口说出的，当时我和阿文散步回宿舍，提到打算晚上建第我的一个博客的事。恰逢最近温度逐日上升，春天的尾声已经有了初夏的感觉，而今天是升温的顶点，天气预报说一场大雨将在今晚开始落下。</p>
-<p>山雨欲来风满楼，傍晚的时候就凉快了起来。我很喜欢这样的风，觉得看到这个名字可以让我想起博客创建时的奇妙天气。</p>
-<h3 id="最近"><a href="#最近" class="headerlink" title="最近"></a>最近</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; sudo systemctl stop covid19</span><br></pre></td></tr></table></figure>
-
-<p>新冠疫情最近又严重起来，甚至让人觉得仿佛回到了2019年末的光景。从开学以来学校就封闭至今，我的生活比较单调，所以才会想到从“想做的事情清单”里挑一些有趣的出来做一做，写博客就是其中之一。</p>
-<h3 id="自由"><a href="#自由" class="headerlink" title="自由"></a>自由</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; whereis freedom</span><br></pre></td></tr></table></figure>
-
-<p>这个博客目前托管在Github，不在中国管辖范围之内，相对国内的媒体平台自由得多。但是Github可能也不够自由，前段时间俄罗斯乌克兰开战，Github表态支持乌克兰，我猜背后多少还是夹杂了政治因素在内。世界互联网上真正自由的地方如今已经很难找了。</p>
-<p>尽管如此，别忘了这个博客是为了自由地写点东西而存在的，那无论到底是不是真的自由，我在写作的时候就应该抛弃瞻前顾后的念头，畅所欲言。我可以因为自己的一句话写得冗长不顺，或者一段内容没能准确表达我的想法而删删改改好久，但是安能摧眉折腰事权贵，使我不得开心颜？</p>
-<p>最后，我还没有在A rainy night’s blog添加评论功能，以后会尽量完善的，此外，后续我还打算邀请一些朋友或者有趣的人在这里发点东西，让这里看起来更像是个文化人儿来的地方。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/04/13/A-rainy-night's-blog/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1110,7 +1152,7 @@
 
 
 <div class="copyright">
-  &copy; 
+  &copy; 2022 – 
   <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -1124,10 +1166,6 @@
   </footer>
 
   
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up fa-lg"></i>
-    <span>0%</span>
-  </div>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
